@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">application test</string>
+    <string name="title">My toolbar !</string>
+    <string name="sub">this is the subtitle</string>
+    <string name="item_settings">test</string>
+    <string name="item_profile">profile</string>
+    <string name="profile_title">Profile</string>
+    <string name="setting_title">Setting</string>
+    <string name="search">Search</string>
+
+    <string-array name="countries_array">
+        <item>un</item>
+        <item>absolu</item>
+        <item>maroc</item>
+        <item>kech</item>
+        <item>ensa</item>
+        <item>Paris</item>
+        <item>Personne</item>
+        <item>Prendre</item>
+        <item>malade</item>
+        <item>arabe</item>
+        <item>aladin</item>
+        <item>un</item>
+
+    </string-array>
+
+</resources>
