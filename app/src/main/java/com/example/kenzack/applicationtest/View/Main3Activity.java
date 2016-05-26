@@ -9,38 +9,28 @@ import android.support.v7.widget.SearchView;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 
 import com.example.kenzack.applicationtest.R;
 
-public class MainActivity extends AppCompatActivity {
-    Button b;
+public class Main3Activity extends AppCompatActivity {
+
+    String[] countries={"Amina","Basma","Ali","Alaoui","Kenza","zakaria"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
+        setContentView(R.layout.activity_main3);
         Toolbar my_toolbar=(Toolbar)findViewById(R.id.my_toolbar);
         my_toolbar.setTitle(R.string.title);
         my_toolbar.setSubtitle(R.string.sub);
         my_toolbar.setLogo(R.drawable.ic_navigation_drawer);
         setSupportActionBar(my_toolbar);
-        b=(Button)findViewById(R.id.button7);
-        b.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                Intent intent = new Intent(MainActivity.this,Main3Activity.class);
-                //intent.putExtra(login, Tlogin.getText().toString());
-                startActivity(intent);
-            }
-        });
-      /* ListView listView_countries=(ListView)findViewById(R.id.listView_searchResults);
-        ArrayAdapter myAdapter=new ArrayAdapter(this,android.R.layout.simple_list_item_1,getResources().getStringArray(R.array.countries_array));
-        listView_countries.setAdapter(myAdapter); */
-        
+        ListView listView_countries=(ListView)findViewById(R.id.list);
+        // ArrayAdapter myAdapter=new ArrayAdapter(this,android.R.layout.simple_list_item_1,getResources().getStringArray(R.array.countries_array));
+        ArrayAdapter myAdapter=new ArrayAdapter(this,android.R.layout.simple_list_item_1,countries);
+        listView_countries.setAdapter(myAdapter);
     }
 
     @Override
@@ -48,20 +38,19 @@ public class MainActivity extends AppCompatActivity {
         getMenuInflater().inflate(R.menu.menu_main,menu);
         SearchView searchView=(SearchView) menu.findItem(R.id.item_search).getActionView();
         SearchManager searchManager= (SearchManager) getSystemService(Context.SEARCH_SERVICE);
-       searchView.setSearchableInfo(searchManager.getSearchableInfo(getComponentName()));
+        searchView.setSearchableInfo(searchManager.getSearchableInfo(getComponentName()));
         return super.onCreateOptionsMenu(menu);
     }
-
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()){
 
             case R.id.item_settings:
-              //  Toast.makeText(this,R.string.item_settings,Toast.LENGTH_LONG).show();
+                //  Toast.makeText(this,R.string.item_settings,Toast.LENGTH_LONG).show();
                 startActivity(new Intent(this,Setting.class));
-                        break;
+                break;
             case R.id.item_profile:
-               // Toast.makeText(this,R.string.item_profile,Toast.LENGTH_LONG).show();
+                // Toast.makeText(this,R.string.item_profile,Toast.LENGTH_LONG).show();
                 startActivity(new Intent(this,profile.class));
                 break;
         }
@@ -69,4 +58,9 @@ public class MainActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
+
 }
+
+
+

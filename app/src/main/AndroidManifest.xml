@@ -32,9 +32,6 @@
                 android:value=".View.MainActivity" />
         </activity>
         <activity android:name=".View.Search_Result">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".View.MainActivity" />
 
             <intent-filter>
                 <action android:name="android.intent.action.SEARCH" />
@@ -46,8 +43,13 @@
         </activity>
         <activity android:name=".View.test" />
         <activity android:name=".View.formulaire" />
+        <activity android:name=".View.ajout_ami" />
         <activity android:name=".View.impoter_image" />
-        <activity android:name=".View.ajout_ami"></activity>
+        <activity android:name=".View.Main3Activity">
+            <meta-data
+                android:name="android.app.default_searchable"
+                android:value=".Search_Result" />
+        </activity>
     </application>
 
 </manifest>

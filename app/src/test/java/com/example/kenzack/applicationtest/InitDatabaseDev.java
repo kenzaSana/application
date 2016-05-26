@@ -21,7 +21,7 @@ public class InitDatabaseDev {
     private final String DB_NAME = "DEV";
     private final String LOGIN_MYSQL ="kniza";
     private final String PASSWORD_MYSQL ="kenza";
-    private final String IP_MYSQL = "192.168.1.23";
+    private final String IP_MYSQL = "192.168.1.19";
 
     @Test
     public void init() throws SQLException {
