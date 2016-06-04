@@ -17,6 +17,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class formulaire extends AppCompatActivity {
+    //TextView login,pass,confirm_pass,email;
     EditText Tlogin,Tpass,Tc,Temail;
     Button cnx;
     @Override
@@ -25,6 +26,10 @@ public class formulaire extends AppCompatActivity {
         setContentView(R.layout.activity_formulaire);
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
         StrictMode.setThreadPolicy(policy);
+        //login=(TextView)findViewById(R.id.textView5);
+        //pass=(TextView)findViewById(R.id.textView6);
+        //confirm_pass=(TextView)findViewById(R.id.textView7);
+        // email=(TextView)findViewById(R.id.textView8);
         Tlogin=(EditText)findViewById(R.id.editText3);
         Tpass=(EditText)findViewById(R.id.editText4);
         Tc=(EditText)findViewById(R.id.editText5);
@@ -59,8 +64,8 @@ public class formulaire extends AppCompatActivity {
                     registerService.register(login,email,pass);
                     Toast toast = Toast.makeText(getApplicationContext(), "Inscription réussie !", Toast.LENGTH_SHORT);
                     toast.show();
-                    Intent intent = new Intent(formulaire.this,MainActivity.class);
-                    //intent.putExtra(login, Tlogin.getText().toString());
+                    Intent intent = new Intent(formulaire.this, MainActivity.class);
+                    intent.putExtra(login, Tlogin.getText().toString());
                     startActivity(intent);
                 }
 
@@ -68,4 +73,5 @@ public class formulaire extends AppCompatActivity {
         });
 
     }
-    }
+
+}

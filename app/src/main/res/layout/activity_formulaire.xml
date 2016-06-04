@@ -15,13 +15,13 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Log in"
         android:id="@+id/textView4"
+        android:layout_marginTop="43dp"
         android:textColor="#000000"
         android:textStyle="bold|italic"
         android:typeface="sans"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="103dp" />
+        android:layout_alignParentStart="true" />
 
     <EditText
         android:layout_width="wrap_content"

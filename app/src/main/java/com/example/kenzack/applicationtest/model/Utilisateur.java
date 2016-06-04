@@ -16,7 +16,6 @@ public class Utilisateur {
     private String login;
     @DatabaseField
     private String email;
-
     @DatabaseField
     private String hashedPasswd;
     @ForeignCollectionField
@@ -62,7 +61,11 @@ public class Utilisateur {
         this.email = email;
     }
 
+    public ForeignCollection<Image> getImagesCrees() {
+        return imagesCrees;
+    }
 
-
-
+    public void setImagesCrees(ForeignCollection<Image> imagesCrees) {
+        this.imagesCrees = imagesCrees;
+    }
 }
